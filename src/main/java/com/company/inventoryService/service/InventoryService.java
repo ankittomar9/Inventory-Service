@@ -1,6 +1,7 @@
 package com.company.inventoryService.service;
 
 import com.company.inventoryService.entity.Event;
+
 import com.company.inventoryService.entity.Venue;
 import com.company.inventoryService.repository.EventRepository;
 import com.company.inventoryService.repository.VenueRepository;
@@ -34,10 +35,10 @@ public class InventoryService {
                 .build()).collect(Collectors.toList());
     }
 
-    public VenueInventoryResponse getVenueInformation(final Long venueId){
+    public VenueInventoryResponse getVenueInformation(final Long venueId) {
         final Venue venue = venueRepository.findById(venueId).orElse(null);
 
-        return  VenueInventoryResponse.builder()
+        return VenueInventoryResponse.builder()
                 .venueId(venue.getId())
                 .venueName(venue.getName())
                 .totalCapacity(venue.getTotalCapacity())

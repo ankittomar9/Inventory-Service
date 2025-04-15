@@ -12,7 +12,7 @@ import java.util.List;
 @RequestMapping("/api/v1")
 public class InventoryController {
 
-    private   InventoryService inventoryService;
+    private InventoryService inventoryService;
 
     @Autowired
     public InventoryController(InventoryService inventoryService) {

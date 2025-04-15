@@ -9,9 +9,9 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+@Entity
 @Getter
 @Setter
-@Entity
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name="venue")
@@ -23,6 +23,7 @@ public class Venue {
 
     @Column(name="name")
     private String name;
+
     @Column(name="address")
     private String address;
 
